@@ -1,6 +1,5 @@
 # vue-component-bundler
-
-> Vue SFC bundler, by Rollup.
+Vue SFC bundler, by Rollup.
 
 ### Use
 
@@ -21,7 +20,7 @@ yarn build
 
 ### Custom config
 
-Create `vcb.config.js` in project root. More detail is [here]().
+Create `vcb.config.js` in project root. More detail is [here](https://github.com/surmon-china/vue-component-bundler/blob/master/lib/default.js).
 
 ```ts
 // vcb.config.js can export a vcb config object or function
@@ -41,7 +40,7 @@ interface Config {
     /* rollup-plugin-typescript2 config */
   }
   minisize?: boolean // true
-  banner?: string // default: TODO: link
+  banner?: string // default: [link](https://github.com/surmon-china/vue-component-bundler/blob/master/lib/default.js#L18)
   // Refer to https://rollupjs.org/guide/en/#warning-treating-module-as-external-dependency
   // list external dependencies, exactly the way it is written in the import statement.
   external: []
