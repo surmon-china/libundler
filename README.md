@@ -21,29 +21,38 @@ yarn build
 
 ### Custom config
 
-Create `vcb.config.js` in project root.
+Create `vcb.config.js` in project root. More detail is [here]().
 
 ```ts
+// vcb.config.js can export a vcb config object or function
+// vcb config object
 interface Config {
-  entry: string // 'src/index.js',
-  target?: string[] // ['umd', 'esm'],
+  entry?: string // 'src/index.js',
+  name?: string // like: 'vue-awesome-swiper' | 'VueAwesomeSwiper'
+  fileName?: string // same name
   outDir?: string // 'dist',
+  targets?: string[] // ['umd', 'esm'],
   parser?: string // 'buble'
-  eslint?: false | { // {}
+  resolve?: string[] // ['.mjs', '.js', '.jsx', '.json', '.vue', '.ts'],
+  eslint?: false | { // auto
     /* rollup-plugin-eslint config */
   }
-  typescript?: false | { // false
+  typescript?: false | { // auto
     /* rollup-plugin-typescript2 config */
   }
-  banner?: string // default:
-  `
-  /**
-   * @file ${pack.name} v${pack.version}
-   * @copyright Copyright (c) ${pack.author.name}. All rights reserved.
-   * @license Released under the ${pack.license} License.
-   * @author ${pack.author.name} <${pack.author.url}>
-   */
-  `
   minisize?: boolean // true
+  banner?: string // default: TODO: link
+  // Refer to https://rollupjs.org/guide/en/#warning-treating-module-as-external-dependency
+  // list external dependencies, exactly the way it is written in the import statement.
+  external: []
+  // Refer to https://rollupjs.org/guide/en#output-globals for details
+  // Provide global variable names to replace your external imports
+  globals: {}
+}
+// function
+// overwrite the default Rollup confog
+function overwrite?(defaultRollupConfig): RollupConfog {
+  // ...
+  return RollupConfig
 }
 ```
