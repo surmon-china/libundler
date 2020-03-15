@@ -1,10 +1,22 @@
 #!/usr/bin/env node
 
 const path = require('path')
-const args = require('args')
 const shelljs = require('shelljs')
+const { COMMAND } = require('../lib/constants')
+const [commandName, ...commandParams] = process.argv.slice(2)
 
-console.log('args', args)
+if (!commandName || commandName === COMMAND.BUILD) {
+  const configFilePath = path.resolve(__dirname, '..', 'lib', 'rollup.js')
+  shelljs.exec(`rollup --config ${configFilePath}`)
+  return
+}
 
-// const configFilePath = path.resolve(__dirname, '..', 'lib', 'rollup.js')
-// shelljs.exec(`rollup --config ${configFilePath}`)
+if (commandName === COMMAND.LINT) {
+  shelljs.exec(`eslint ${commandParams.join(' ')}`)
+  return
+}
+
+if (commandName === COMMAND.TEST) {
+  shelljs.exec(`jest ${commandParams.join(' ')}`)
+  return
+}
