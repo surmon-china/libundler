@@ -1,5 +1,7 @@
 # abc-factory
-JavaScript bundler/lint/test, by Rollup/ESlint/Jest.
+📦 JavaScript bundler/lint/test, by Rollup/ESlint/Jest.
+
+JavaScript 开发生产一条龙工具，零配置，开箱即用。
 
 ### Use
 
@@ -7,8 +9,8 @@ JavaScript bundler/lint/test, by Rollup/ESlint/Jest.
 yarn add abc-factory --dev
 ```
 
-```js
-// package.json
+**package.json**
+```json
 "scripts": {
   "build": "abc build",
   "lint": "abc lint --ext .ts,.vue src",
@@ -25,10 +27,11 @@ yarn build
 
 Create `abc.config.js` in project root. More detail is [here](https://github.com/surmon-china/abc-factory/blob/master/lib/default.js).
 
+`abc.config.js` can export a abc config object or function.
+
+**config object**
 ```ts
-// abc.config.js can export a abc config object or function
-// abc config object
-interface Config {
+module.exports = {
   entry?: string // 'src/index.js',
   name?: string // like: 'vue-awesome-swiper' | 'VueAwesomeSwiper'
   fileName?: string // same name
@@ -51,9 +54,12 @@ interface Config {
   // Provide global variable names to replace your external imports
   globals: {}
 }
-// function
+```
+
+**config function**
+```ts
 // overwrite the default Rollup confog
-function overwrite?(defaultRollupConfig): RollupConfog {
+module.exports = (defaultRollupConfig): RollupConfog => {
   // ...
   return RollupConfig
 }

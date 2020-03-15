@@ -3,8 +3,6 @@
     "target": "es5",
     "module": "esnext",
     "strict": true,
-    "declaration": true,
-    "declarationDir": "types",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "importHelpers": true,
@@ -27,7 +25,6 @@
   },
   "exclude": [
     "node_modules",
-    "dist",
-    "tests"
+    "dist"
   ]
 }

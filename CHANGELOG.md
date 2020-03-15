@@ -1,6 +1,13 @@
 
 ## CHANGELOG
 
+### v0.2.0
+
+**Feature**
+- Rename to abc-factory
+- Support (test) jest & lint (eslint)
+- Provide default configs (eslintrc/tsconfig/jest-config)
+
 ### v0.1.0
 
 **Feature**
