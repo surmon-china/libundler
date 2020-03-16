@@ -6,7 +6,8 @@ JavaScript 开发生产一条龙工具，零配置，开箱即用。
 ### Use
 
 ```bash
-yarn add abc-factory --dev
+# yarn add abc-factory --dev
+yarn add https://github.com/surmon-china/abc-factory.git --dev --force
 ```
 
 **package.json**
@@ -23,7 +24,7 @@ yarn add abc-factory --dev
 yarn build
 ```
 
-### Custom config
+### About abc config
 
 Create `abc.config.js` in project root. More detail is [here](https://github.com/surmon-china/abc-factory/blob/master/lib/default.js).
 
@@ -31,6 +32,7 @@ Create `abc.config.js` in project root. More detail is [here](https://github.com
 
 **config object**
 ```ts
+// abc.config.js
 module.exports = {
   entry?: string // 'src/index.js',
   name?: string // like: 'VueAwesomeSwiper'
@@ -59,8 +61,9 @@ module.exports = {
 
 **config function**
 ```ts
-// overwrite the default Rollup confog
+// abc.config.js
 module.exports = (defaultRollupConfig): RollupConfog => {
+  // overwrite the default Rollup confog
   // ...
   return RollupConfig
 }
@@ -70,7 +73,7 @@ module.exports = (defaultRollupConfig): RollupConfog => {
 
 **[tsconfig.json - extends](https://www.typescriptlang.org/tsconfig#extends)**
 
-```json
+```js
 {
   "extends": "./node_modules/abc-factory/config/tsconfig/vue",
   // your options like:
@@ -108,4 +111,3 @@ module.exports = {
   }
 }
 ```
-
