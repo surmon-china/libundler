@@ -3,12 +3,12 @@
 const path = require('path')
 const consola = require('consola')
 const child_process = require('child_process')
-const { COMMAND } = require('../lib/constants')
+const { COMMAND, LOG_TITLE } = require('../lib/constants')
 const [commandName, ...commandParams] = process.argv.slice(2)
 
 const run = (command, params) => {
   if (command) {
-    consola.info(`${command} ${params.join(' ')}`)
+    consola.info(`${LOG_TITLE}: ${command} ${params.join(' ')}`)
     child_process.execFileSync(command, params, { stdio: 'inherit' })
   }
 }

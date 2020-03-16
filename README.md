@@ -1,5 +1,5 @@
 # abc-factory
-📦 JavaScript bundler/lint/test, by Rollup/ESlint/Jest.
+📦 JavaScript bundler/linter/tester, by Rollup/ESlint/Jest.
 
 JavaScript 开发生产一条龙工具，零配置，开箱即用。
 
