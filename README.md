@@ -64,7 +64,7 @@ module.exports = {
   // enable typescript plugin (before build), default: auto get by package.json.dependencies
   typescript?: false | { /* rollup-plugin-typescript2 config */ }
 
-  // mini
+  // compression
   minisize?: boolean // true
 
   // file header
@@ -72,11 +72,13 @@ module.exports = {
 
   // Refer to https://rollupjs.org/guide/en/#warning-treating-module-as-external-dependency
   // list external dependencies, exactly the way it is written in the import statement.
-  external: []
+  external?: string[]
 
   // Refer to https://rollupjs.org/guide/en#output-globals for details
   // Provide global variable names to replace your external imports
-  globals: {}
+  globals?: {
+    [key: string]: string
+  }
 }
 ```
 
