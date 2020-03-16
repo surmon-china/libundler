@@ -36,7 +36,7 @@ module.exports = {
   name?: string // like: 'vue-awesome-swiper' | 'VueAwesomeSwiper'
   fileName?: string // same name
   outDir?: string // 'dist',
-  targets?: string[] // ['umd', 'esm'],
+  targets?: string[] // ['umd', 'esm', 'cjs'],
   parser?: string // 'buble'
   resolve?: string[] // ['.mjs', '.js', '.jsx', '.json', '.ts'],
   eslint?: false | { // false

@@ -1,7 +1,7 @@
 {
   "name": "abc-factory",
   "version": "0.2.0",
-  "description": "JavaScript bundler/lint/test, by Rollup/ESlint/Jest",
+  "description": "JavaScript base factory",
   "author": {
     "name": "Surmon",
     "url": "https://surmon.me"
