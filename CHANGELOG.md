@@ -7,6 +7,7 @@
 - Rename to abc-factory
 - Support (test) jest & lint (eslint)
 - Support `cjs` module
+- Support `babel` parser
 - Provide default configs (eslintrc/tsconfig/jest-config)
 
 ### v0.1.0
