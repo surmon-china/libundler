@@ -34,25 +34,46 @@ Create `abc.config.js` in project root. More detail is [here](https://github.com
 ```ts
 // abc.config.js
 module.exports = {
-  entry?: string // 'src/index.js',
-  name?: string // like: 'VueAwesomeSwiper'
-  fileName?: string // like: 'vue-awesome-swiper'
-  outDir?: string // 'dist',
-  targets?: string[] // ['umd', 'esm', 'cjs'],
-  parser?: string // 'buble' | 'babel'
+
+  // entry file, default: 'src/index.js'
+  entry?: string
+
+  // lib name, default: auto get by package.json.name, like: 'VueAwesomeSwiper'
+  name?: string
+
+  // out file name, default: auto get by package.json.name, like: 'vue-awesome-swiper'
+  fileName?: string
+
+  // output dir, default: 'dist'
+  outDir?: string
+
+  // output bundle types, default: ['umd', 'esm', 'cjs']
+  targets?: string[]
+
+  // parser type, default: 'buble', options: 'buble' | 'babel'
+  parser?: string
+  // parser plugin options, default rollup-plugin-buble options
   parserOptions?: object // {}
-  resolve?: string[] // ['.mjs', '.js', '.jsx', '.json', '.ts'],
-  eslint?: false | { // false
-    /* rollup-plugin-eslint config */
-  }
-  typescript?: false | { // auto
-    /* rollup-plugin-typescript2 config */
-  }
+
+  // todo file formats, default: ['.mjs', '.js', '.jsx', '.json', '.ts']
+  resolve?: string[]
+
+  // enable eslint plugin (before build), default: false
+  eslint?: false | { /* rollup-plugin-eslint config */ }
+
+  // enable typescript plugin (before build), default: auto get by package.json.dependencies
+  typescript?: false | { /* rollup-plugin-typescript2 config */ }
+
+  // mini
   minisize?: boolean // true
-  banner?: string // default: [link](https://github.com/surmon-china/abc-factory/blob/master/lib/default.js#L18)
+
+  // file header
+  banner?: string // default: https://github.com/surmon-china/abc-factory/blob/master/lib/default.js#L18
+
   // Refer to https://rollupjs.org/guide/en/#warning-treating-module-as-external-dependency
   // list external dependencies, exactly the way it is written in the import statement.
   external: []
+
   // Refer to https://rollupjs.org/guide/en#output-globals for details
   // Provide global variable names to replace your external imports
   globals: {}
