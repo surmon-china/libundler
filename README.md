@@ -33,11 +33,12 @@ Create `abc.config.js` in project root. More detail is [here](https://github.com
 ```ts
 module.exports = {
   entry?: string // 'src/index.js',
-  name?: string // like: 'vue-awesome-swiper' | 'VueAwesomeSwiper'
-  fileName?: string // same name
+  name?: string // like: 'VueAwesomeSwiper'
+  fileName?: string // like: 'vue-awesome-swiper'
   outDir?: string // 'dist',
   targets?: string[] // ['umd', 'esm', 'cjs'],
-  parser?: string // 'buble'
+  parser?: string // 'buble' | 'babel'
+  parserOptions?: object // {}
   resolve?: string[] // ['.mjs', '.js', '.jsx', '.json', '.ts'],
   eslint?: false | { // false
     /* rollup-plugin-eslint config */
@@ -64,3 +65,47 @@ module.exports = (defaultRollupConfig): RollupConfog => {
   return RollupConfig
 }
 ```
+
+### About abc provide default configs
+
+**[tsconfig.json - extends](https://www.typescriptlang.org/tsconfig#extends)**
+
+```json
+{
+  "extends": "./node_modules/abc-factory/config/tsconfig/vue",
+  // your options like:
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "types",
+    // ...
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    // ...
+  ]
+}
+```
+
+**[jest.config.js - extends](https://jestjs.io/docs/en/configuration)**
+
+```js
+const abcJestConfig = require('./node_modules/abc-factory/config/jest/vue.typescript')
+module.exports = {
+  ...abcJestConfig,
+  testRegex: "(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+  // ...
+}
+```
+
+**[.eslintrc.js - extends](https://eslint.org/docs/user-guide/configuring#extending-configuration-files)**
+
+```js
+module.exports = {
+  extends: './node_modules/abc-factory/config/eslintrc/vue.typescript',
+  rules: {
+    // rules...
+  }
+}
+```
+
