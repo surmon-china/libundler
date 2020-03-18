@@ -4,7 +4,7 @@
   "description": "JavaScript base factory",
   "author": {
     "name": "Surmon",
-    "url": "https://surmon.me"
+    "url": "https://github.com/surmon-china"
   },
   "license": "MIT",
   "private": false,
@@ -21,6 +21,12 @@
     "rollup",
     "webpack"
   ],
+  "scripts": {
+    "release": ". ./scripts/release.sh"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "bin": {
     "abc": "bin/abc.js"
   },
