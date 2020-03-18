@@ -1,9 +1,15 @@
 # abc-factory
+
+[![GitHub stars](https://img.shields.io/github/stars/surmon-china/abc-factory.svg?style=for-the-badge)](https://github.com/surmon-china/abc-factory/stargazers)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/surmon-china/abc-factory/Publish?style=for-the-badge)
+[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=for-the-badge)](https://github.com/surmon-china/abc-factory)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](https://github.com/surmon-china/abc-factory)
+
+[![NPM](https://nodei.co/npm/abc-factory.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/abc-factory/)
+
 📦 JavaScript bundler/linter/tester, by Rollup/ESlint/Jest.
 
 JavaScript 开发生产一条龙工具，零配置，开箱即用。
-
-[![NPM](https://nodei.co/npm/abc-factory.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/abc-factory/)
 
 ---
 
