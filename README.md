@@ -92,17 +92,18 @@ module.exports = (defaultRollupConfig): RollupConfog => {
 }
 ```
 
-### About abc provide default configs
+### About abc provide preset configs
 
 **[tsconfig.json - extends](https://www.typescriptlang.org/tsconfig#extends)**
 
 ```js
 {
-  "extends": "./node_modules/abc-factory/config/tsconfig/vue",
+  "extends": "./node_modules/abc-factory/preset/tsconfig/vue",
   // your options like:
   "compilerOptions": {
     "declaration": true,
     "declarationDir": "types",
+    "baseUrl": ".",
     // ...
   },
   "exclude": [
@@ -116,10 +117,20 @@ module.exports = (defaultRollupConfig): RollupConfog => {
 **[jest.config.js - extends](https://jestjs.io/docs/en/configuration)**
 
 ```js
-const abcJestConfig = require('./node_modules/abc-factory/config/jest/vue.typescript')
+const abcJestConfig = require('./node_modules/abc-factory/preset/jest/vue.typescript')
 module.exports = {
   ...abcJestConfig,
+  rootDir: __dirname,
   testRegex: "(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+  moduleNameMapper: {
+    '^vue$': path.resolve(__dirname, './node_modules/vue/dist/vue.common.js'),
+  },
+  globals: {
+    'ts-jest': {
+      // https://kulshekhar.github.io/ts-jest/user/config/isolatedModules
+      isolatedModules: true
+    }
+  }
   // ...
 }
 ```
@@ -128,7 +139,7 @@ module.exports = {
 
 ```js
 module.exports = {
-  extends: './node_modules/abc-factory/config/eslintrc/vue.typescript',
+  extends: './node_modules/abc-factory/preset/eslintrc/vue.typescript',
   rules: {
     // rules...
   }
