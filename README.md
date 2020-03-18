@@ -1,11 +1,11 @@
 # abc-factory
 
 [![GitHub stars](https://img.shields.io/github/stars/surmon-china/abc-factory.svg?style=for-the-badge)](https://github.com/surmon-china/abc-factory/stargazers)
+![npm (scoped)](https://img.shields.io/npm/v/@surmon-china/abc-factory?style=for-the-badge)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/surmon-china/abc-factory?label=GPR&style=for-the-badge)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/surmon-china/abc-factory/Publish?label=publish&style=for-the-badge)
 [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=for-the-badge)](https://github.com/surmon-china/abc-factory)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](https://github.com/surmon-china/abc-factory)
-
-[![NPM](https://nodei.co/npm/abc-factory.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/abc-factory/)
 
 📦 JavaScript bundler/linter/tester, by Rollup/ESlint/Jest.
 
@@ -16,9 +16,7 @@ JavaScript 开发生产一条龙工具，零配置，开箱即用。
 ### Use
 
 ```bash
-yarn add abc-factory --dev
-
-# yarn add https://github.com/surmon-china/abc-factory.git --dev --force
+yarn add @surmon-china/abc-factory --dev
 ```
 
 **package.json**
