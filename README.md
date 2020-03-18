@@ -5,6 +5,8 @@ JavaScript 开发生产一条龙工具，零配置，开箱即用。
 
 [![NPM](https://nodei.co/npm/abc-factory.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/abc-factory/)
 
+---
+
 ### Use
 
 ```bash
@@ -26,6 +28,8 @@ yarn add abc-factory --dev
 ```bash
 yarn build
 ```
+
+---
 
 ### About abc config
 
@@ -95,6 +99,8 @@ module.exports = (defaultRollupConfig): RollupConfog => {
 }
 ```
 
+---
+
 ### About abc provide preset configs
 
 **[tsconfig.json - extends](https://www.typescriptlang.org/tsconfig#extends)**
@@ -138,7 +144,7 @@ module.exports = {
 }
 ```
 
-**[.eslintrc.js - extends](https://eslint.org/docs/user-guide/configuring#extending-configuration-files)**
+**[.eslintrc.js  extends](https://eslint.org/docs/user-guide/configuring#extending-configuration-files)**
 
 ```js
 module.exports = {
