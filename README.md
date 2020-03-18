@@ -9,7 +9,7 @@
 
 📦 JavaScript bundler/linter/tester, by Rollup/ESlint/Jest.
 
-JavaScript 开发生产一条龙工具，零配置，开箱即用。
+🏭 JavaScript 开发生产一条龙工具，零配置，开箱即用。
 
 ---
 
