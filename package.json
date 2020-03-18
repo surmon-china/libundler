@@ -1,6 +1,6 @@
 {
-  "name": "abc-factory",
-  "version": "0.2.6",
+  "name": "@surmon-china/abc-factory",
+  "version": "0.2.7",
   "description": "JavaScript base factory",
   "author": {
     "name": "Surmon",
@@ -48,7 +48,9 @@
     "consola": "^2.11.3",
     "eslint": "^6.8.0",
     "eslint-plugin-vue": "^6.2.2",
+    "global": "^4.4.0",
     "jest": "^25.1.0",
+    "nrm": "^1.2.1",
     "rollup": "^2.0.6",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-buble": "^0.19.8",
