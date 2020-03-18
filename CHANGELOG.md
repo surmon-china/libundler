@@ -4,11 +4,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## 0.2.0 (2020-03-18)
 
-
-## CHANGELOG
-
-### v0.2.0
-
 **Feature**
 - Rename to abc-factory
 - Support (test) jest & lint (eslint)
