@@ -3,11 +3,14 @@
 
 JavaScript 开发生产一条龙工具，零配置，开箱即用。
 
+[![NPM](https://nodei.co/npm/abc-factory.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/abc-factory/)
+
 ### Use
 
 ```bash
-# yarn add abc-factory --dev
-yarn add https://github.com/surmon-china/abc-factory.git --dev --force
+yarn add abc-factory --dev
+
+# yarn add https://github.com/surmon-china/abc-factory.git --dev --force
 ```
 
 **package.json**
