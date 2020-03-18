@@ -1,6 +1,6 @@
 {
   "name": "abc-factory",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "JavaScript base factory",
   "author": {
     "name": "Surmon",
@@ -21,11 +21,13 @@
     "rollup",
     "webpack"
   ],
+  "files": [
+    "bin",
+    "lib",
+    "preset"
+  ],
   "scripts": {
     "release": ". ./scripts/release.sh"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   },
   "bin": {
     "abc": "bin/abc.js"
