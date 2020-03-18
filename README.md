@@ -111,7 +111,7 @@ module.exports = (defaultRollupConfig): RollupConfog => {
 
 ```js
 {
-  "extends": "./node_modules/abc-factory/preset/tsconfig/vue",
+  "extends": "./node_modules/@surmon-china/abc-factory/preset/tsconfig/vue",
   // your options like:
   "compilerOptions": {
     "declaration": true,
@@ -130,7 +130,7 @@ module.exports = (defaultRollupConfig): RollupConfog => {
 **[jest.config.js - extends](https://jestjs.io/docs/en/configuration)**
 
 ```js
-const abcJestConfig = require('./node_modules/abc-factory/preset/jest/vue.typescript')
+const abcJestConfig = require('@surmon-china/abc-factory/preset/jest/vue.typescript')
 module.exports = {
   ...abcJestConfig,
   rootDir: __dirname,
@@ -152,7 +152,7 @@ module.exports = {
 
 ```js
 module.exports = {
-  extends: './node_modules/abc-factory/preset/eslintrc/vue.typescript',
+  extends: './node_modules/@surmon-china/abc-factory/preset/eslintrc/vue.typescript',
   rules: {
     // rules...
   }
