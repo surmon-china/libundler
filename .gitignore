@@ -6,4 +6,3 @@ node_modules
 .vscode
 package-lock.json
 npm-debug.log
-scripts
