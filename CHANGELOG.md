@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 ## [0.3.0](https://github.com/surmon-china/abc-factory/compare/v0.2.9...v0.3.0) (2020-03-24)
 
+**Breaking change**
+- Rename option `minisize` to `minimize`
+
+**Feature**
+- Provide `vue` option
+- Provide `exports` option
+- Update Eslint default value from `false` to `auto`
+- Update Babel default value with `presets: ['@babel/preset-env']`
+- Update buble default value to `{ objectAssign: true }`
+
 ### [0.2.9](https://github.com/surmon-china/abc-factory/compare/v0.2.8...v0.2.9) (2020-03-18)
 
 ### [0.2.8](https://github.com/surmon-china/abc-factory/compare/v0.2.7...v0.2.8) (2020-03-18)
