@@ -1,6 +1,6 @@
 {
   "name": "@surmon-china/abc-factory",
-  "version": "0.2.9",
+  "version": "0.3.0",
   "description": "JavaScript base factory",
   "author": {
     "name": "Surmon",
@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-env": "^7.9.0",
     "@rollup/plugin-alias": "^3.0.1",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-json": "^4.0.2",
@@ -44,7 +44,6 @@
     "@vue/test-utils": "^1.0.0-beta.32",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^25.1.0",
-    "clean-css": "^4.2.3",
     "consola": "^2.11.3",
     "eslint": "^6.8.0",
     "eslint-plugin-vue": "^6.2.2",
