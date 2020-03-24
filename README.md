@@ -61,6 +61,9 @@ module.exports = {
   // output bundle types, default: ['umd', 'esm', 'cjs']
   targets?: string[]
 
+  // exports moudle type, default: 'auto'
+  exports?: string
+
   // parser type, default: 'buble', options: 'buble' | 'babel'
   parser?: string
   // parser plugin options, default rollup-plugin-buble options
@@ -69,6 +72,9 @@ module.exports = {
   // todo file formats, default: ['.mjs', '.js', '.jsx', '.json', '.ts']
   resolve?: string[]
 
+  // enable vue plugin, default: auto get by package.json.<xxx>dependencies
+  vue?: false | { /* rollup-plugin-vue config */ }
+
   // enable eslint plugin (before build), default: false
   eslint?: false | { /* rollup-plugin-eslint config */ }
 
@@ -76,7 +82,7 @@ module.exports = {
   typescript?: false | { /* rollup-plugin-typescript2 config */ }
 
   // compression
-  minisize?: boolean // true
+  minimize?: boolean // true
 
   // file header
   banner?: string // default: https://github.com/surmon-china/abc-factory/blob/master/lib/default.js#L18
