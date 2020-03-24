@@ -2,7 +2,6 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-### [0.3.0](https://github.com/surmon-china/abc-factory/compare/v0.2.8...v0.2.9) (2020-03-18)
 
 **Breaking change**
 - Rename option `minisize` to `minimize`
