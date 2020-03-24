@@ -13,7 +13,7 @@
 
 ---
 
-### Use
+### Usage
 
 ```bash
 yarn add @surmon-china/abc-factory --dev
@@ -35,7 +35,7 @@ yarn build
 
 ---
 
-### About abc config
+### Config
 
 Create `abc.config.js` in project root. More detail is [here](https://github.com/surmon-china/abc-factory/blob/master/lib/default.js).
 
@@ -111,7 +111,7 @@ module.exports = (defaultRollupConfig): RollupConfog => {
 
 ---
 
-### About abc provide preset configs
+### Preset (about abc provide preset configs)
 
 **[tsconfig.json - extends](https://www.typescriptlang.org/tsconfig#extends)**
 
