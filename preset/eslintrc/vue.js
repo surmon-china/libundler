@@ -1,4 +1,3 @@
-
 module.exports = {
   root: true,
   env: {
@@ -7,6 +6,6 @@ module.exports = {
     es6: true,
   },
   extends: [
-    'plugin:vue/recommended'
+    'plugin:vue/vue3-recommended'
   ]
 }
