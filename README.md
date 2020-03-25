@@ -39,7 +39,7 @@ yarn build
 
 Create `abc.config.js` in project root. More detail is [here](https://github.com/surmon-china/abc-factory/blob/master/lib/default.js).
 
-`abc.config.js` can export a abc config object or function.
+`abc.config.js` type: `AbcConfigObject | AbcConfigObject[] | (defaultRollupConfig) => RollupConfog`.
 
 **config object**
 ```ts
