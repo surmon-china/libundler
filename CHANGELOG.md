@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ### [0.3.2](https://github.com/surmon-china/abc-factory/compare/v0.3.0...v0.3.2) (2020-03-26)
 
+### [0.3.2](https://github.com/surmon-china/abc-factory/compare/v0.3.0...v0.3.2) (2020-03-26)
+
 **Add**
 - Add `.javascript` & `.typescript` for `eslintrc` presets
 - Update `preset/eslintrc/typescript`
