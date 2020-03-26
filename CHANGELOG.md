@@ -2,16 +2,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-**Breaking change**
-- Rename the `umd (empty)` fileName to `.umd.js`
-
-**Add**
-- Add `.javascript` & `.typescript` for `eslintrc` presets
-- Update `preset/eslintrc/typescript`
-
-**Update**
-- Upgrade `eslint-plugin-vue` to `vue3-recommended`
-- Support array config with `abc.config`
+### [0.3.2](https://github.com/surmon-china/abc-factory/compare/v0.3.0...v0.3.2) (2020-03-26)
 
 ## [0.3.0](https://github.com/surmon-china/abc-factory/compare/v0.2.9...v0.3.0) (2020-03-24)
 
