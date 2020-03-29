@@ -1,11 +1,11 @@
 # abc-factory
 
 [![GitHub stars](https://img.shields.io/github/stars/surmon-china/abc-factory.svg?style=for-the-badge)](https://github.com/surmon-china/abc-factory/stargazers)
-![npm (scoped)](https://img.shields.io/npm/v/@surmon-china/abc-factory?style=for-the-badge)
-![GitHub package.json version](https://img.shields.io/github/package-json/v/surmon-china/abc-factory?label=GPR&style=for-the-badge)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/surmon-china/abc-factory/Publish?label=publish&style=for-the-badge)
+[![npm](https://img.shields.io/npm/v/@surmon-china/abc-factory?color=c7343a&label=npm&style=for-the-badge)](https://www.npmjs.com/package/@surmon-china/abc-factory)
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/surmon-china/abc-factory?color=1074e7&label=GPR&style=for-the-badge)](https://github.com/surmon-china/abc-factory/packages/156005)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/surmon-china/abc-factory/Publish?label=publish&style=for-the-badge)](https://github.com/surmon-china/abc-factory/actions?query=workflow%3APublish)
 [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=for-the-badge)](https://github.com/surmon-china/abc-factory)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](https://github.com/surmon-china/abc-factory)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](https://github.com/surmon-china/abc-factory/blob/master/LICENSE)
 
 📦 JavaScript bundler/linter/tester, by Rollup/ESlint/Jest.
 
