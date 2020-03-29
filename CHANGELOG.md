@@ -2,6 +2,16 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+### [0.3.3](https://github.com/surmon-china/abc-factory/compare/v0.3.2...v0.3.3) (2020-03-29)
+
+**Feature**
+- Support @rollup/plugin-replace config
+
+**Update**
+- Add normal tsconfig
+- Update default banner config
+- Improve JSON config output
+
 ### [0.3.2](https://github.com/surmon-china/abc-factory/compare/v0.3.0...v0.3.2) (2020-03-26)
 
 **Add**
@@ -11,11 +21,6 @@ All notable changes to this project will be documented in this file.
 **Update**
 - Upgrade `eslint-plugin-vue` to `vue3-recommended`
 - Support `Array` config with `abc.config`
-
-- Add normal tsconfig
-- Support @rollup/plugin-replace config
-- Update default banner config
-- Improve JSON config output
 
 ### [0.3.0](https://github.com/surmon-china/abc-factory/compare/v0.2.9...v0.3.0) (2020-03-24)
 
