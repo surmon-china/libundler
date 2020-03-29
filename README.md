@@ -64,6 +64,9 @@ module.exports = {
   // exports moudle type, default: 'auto'
   exports?: string
 
+  // @rollup/plugin-replace config, default { PACKAGE_VERSION, 'process.env.NODE_ENV' }
+  replace?: object
+
   // parser type, default: 'buble', options: 'buble' | 'babel'
   parser?: string
   // parser plugin options, default rollup-plugin-buble options
