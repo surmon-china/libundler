@@ -9,7 +9,7 @@ const [commandName, ...commandParams] = process.argv.slice(2)
 const run = (command, params) => {
   if (command) {
     consola.info(`${LOG_TITLE}: ${command} ${params.join(' ')}`)
-    child_process.execFileSync(command, params, { stdio: 'inherit' })
+    child_process.execFileSync(process.platform === 'win32' ? command + '.cmd' : command, params, { stdio: 'inherit' })
   }
 }
 
