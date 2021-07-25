@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 **BREAKING CHANGE**
 
-- TypeScript
+- TypeScript `rollup-plugin-typescript2` to `rollup-plugin-ts`
 - Remove test/lint
 
 ### 0.3.3 (2020-03-29)
@@ -46,22 +46,6 @@ All notable changes to this project will be documented in this file.
 - Update Eslint default value from `false` to `auto`
 - Update Babel default value with `presets: ['@babel/preset-env']`
 - Update buble default value to `{ objectAssign: true }`
-
-### 0.2.9 (2020-03-18)
-
-### 0.2.8 (2020-03-18)
-
-### 0.2.7 (2020-03-18)
-
-### 0.2.6 (2020-03-18)
-
-### 0.2.4 (2020-03-18)
-
-### 0.2.2 (2020-03-18)
-
-### 0.2.1 (2020-03-18)
-
-### 0.2.0 (2020-03-18)
 
 **Feature**
 
