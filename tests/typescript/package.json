@@ -1,0 +1,17 @@
+{
+  "name": "ts-lib",
+  "version": "0.1.0",
+  "main": "dist/ts-lib.umd.js",
+  "module": "dist/ts-lib.esm.js",
+  "types": "dist/ts-lib.esm.d.ts",
+  "scripts": {
+    "lint": "eslint --ext .ts src/**",
+    "build": "node ../../bin/libundler"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.4",
+    "@typescript-eslint/parser": "^4.28.4",
+    "eslint": "^7.31.0",
+    "typescript": "^4.3.5"
+  }
+}

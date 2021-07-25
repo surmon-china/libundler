@@ -1,0 +1,17 @@
+{
+  "name": "rcs",
+  "version": "0.1.0",
+  "main": "dist/rcs.umd.js",
+  "module": "dist/rcs.esm.js",
+  "scripts": {
+    "lint": "eslint --ext .jsx src/",
+    "build": "node ../../bin/libundler"
+  },
+  "devDependencies": {
+    "eslint": "^7.31.0",
+    "eslint-plugin-react": "^7.24.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.36.0"
+  }
+}

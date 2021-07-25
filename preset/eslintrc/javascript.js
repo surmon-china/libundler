@@ -5,7 +5,5 @@ module.exports = {
     node: true,
     es6: true,
   },
-  plugins: [
-    'eslint:recommended'
-  ]
+  plugins: ['eslint:recommended'],
 }

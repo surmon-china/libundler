@@ -1,56 +1,70 @@
-
 # Changelog
+
 All notable changes to this project will be documented in this file.
 
-### [0.3.3](https://github.com/surmon-china/abc-factory/compare/v0.3.2...v0.3.3) (2020-03-29)
+### 1.0.0 (2021-07-24)
+
+**BREAKING CHANGE**
+
+- TypeScript
+- Remove test/lint
+
+### 0.3.3 (2020-03-29)
 
 **Feature**
+
 - Support @rollup/plugin-replace config
 
 **Update**
+
 - Add normal tsconfig
 - Update default banner config
 - Improve JSON config output
 
-### [0.3.2](https://github.com/surmon-china/abc-factory/compare/v0.3.0...v0.3.2) (2020-03-26)
+### 0.3.2 (2020-03-26)
 
 **Add**
+
 - Add `.javascript` & `.typescript` for `eslintrc` presets
 - Update `preset/eslintrc/typescript`
 
 **Update**
+
 - Upgrade `eslint-plugin-vue` to `vue3-recommended`
 - Support `Array` config with `abc.config`
 
-### [0.3.0](https://github.com/surmon-china/abc-factory/compare/v0.2.9...v0.3.0) (2020-03-24)
+### 0.3.0 (2020-03-24)
 
 **Breaking change**
+
 - Rename option `minisize` to `minimize`
 
 **Feature**
+
 - Provide `vue` option
 - Provide `exports` option
 - Update Eslint default value from `false` to `auto`
 - Update Babel default value with `presets: ['@babel/preset-env']`
 - Update buble default value to `{ objectAssign: true }`
 
-### [0.2.9](https://github.com/surmon-china/abc-factory/compare/v0.2.8...v0.2.9) (2020-03-18)
+### 0.2.9 (2020-03-18)
 
-### [0.2.8](https://github.com/surmon-china/abc-factory/compare/v0.2.7...v0.2.8) (2020-03-18)
+### 0.2.8 (2020-03-18)
 
-### [0.2.7](https://github.com/surmon-china/abc-factory/compare/v0.2.6...v0.2.7) (2020-03-18)
+### 0.2.7 (2020-03-18)
 
-### [0.2.6](https://github.com/surmon-china/abc-factory/compare/v0.2.4...v0.2.6) (2020-03-18)
+### 0.2.6 (2020-03-18)
 
-### [0.2.4](https://github.com/surmon-china/abc-factory/compare/v0.2.2...v0.2.4) (2020-03-18)
+### 0.2.4 (2020-03-18)
 
-### [0.2.2](https://github.com/surmon-china/abc-factory/compare/v0.2.1...v0.2.2) (2020-03-18)
+### 0.2.2 (2020-03-18)
 
-### [0.2.1](https://github.com/surmon-china/abc-factory/compare/v0.2.0...v0.2.1) (2020-03-18)
+### 0.2.1 (2020-03-18)
 
 ### 0.2.0 (2020-03-18)
 
 **Feature**
+
 - Rename to abc-factory
 - Support (test) jest & lint (eslint)
 - Support `cjs` module
@@ -60,6 +74,7 @@ All notable changes to this project will be documented in this file.
 ### v0.1.0
 
 **Feature**
+
 - Support postcss
 - Support TypeScript
 - Support ESlint
