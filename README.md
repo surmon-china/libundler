@@ -6,7 +6,7 @@
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/surmon-china/libundler/Publish?label=publish&style=for-the-badge)](https://github.com/surmon-china/libundler/actions?query=workflow%3APublish)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](https://github.com/surmon-china/libundler/blob/master/LICENSE)
 
-📦 JavaScript universal library bundler, by Rollup.
+📦 Universal JavaScript library bundler, powered by [rollup](https://github.com/rollup).
 
 🏭 通用的 JavaScript 库打包工具，零配置、开箱即用。
 
@@ -14,25 +14,32 @@
 
 ### Usage
 
-**1. install**
+1. **install**
 
 ```bash
-yarn add libundler --dev
+npm install @surmon-china/libundler --save-dev
+
+# or
+yarn add @surmon-china/libundler --dev
 ```
 
-**2. add `build` script to `package.json`**
+2. **add `build` script to `package.json`**
 
 ```json
 "scripts": {
   "build": "libundler",
-  // or
-  "build": "bundle",
-  // or
+}
+```
+
+or
+
+```json
+"scripts": {
   "build": "b",
 }
 ```
 
-**3. run build**
+3. **run build**
 
 ```bash
 yarn build
@@ -42,40 +49,41 @@ yarn build
 
 ### Config
 
-> Create `libundler.config.js` in project root. More detail interface is [here](https://github.com/surmon-china/libundler/blob/master/lib/default.js).
+By default, you do not need to specify a configuration file, libundler will generate a nearly perfect configuration for the bundle according to your `package.json`.
 
-`libundler.config.js` type:
+But if you have more specific needs, you can create `libundler.config.js` in your project root.
+
+[`libundler.config.js` interface:](https://github.com/surmon-china/libundler/blob/main/src/interface.ts)
 
 - `LibundlerConfigObject`
 - `LibundlerConfigObject[]`
-- `(defaultRollupConfig) => RollupConfog`
+- `(defaultRollupConfig) => RollupConfig`
 
-**config object example**
+**config example projects:**
+
+- [javascript](https://github.com/surmon-china/libundler/tree/main/tests/javascript)
+- [typescript](https://github.com/surmon-china/libundler/tree/main/tests/typescript)
+- [react-jsx-scss](https://github.com/surmon-china/libundler/tree/main/tests/react-jsx-scss)
+- [react-tsx](https://github.com/surmon-china/libundler/tree/main/tests/react-tsx)
+- [vue-ts](https://github.com/surmon-china/libundler/tree/main/tests/vue-ts)
+
+**object config example:**
 
 ```ts
+// libundler.config.js
+
 /** @type {import('@surmon-china/libundler/lib/interface').LibundlerConfigObject} */
 module.exports = {
-  entry: 'src/index.ts',
-  fileName: 'library',
-  targets: ['umd', 'esm'],
-  minimize: false,
-  external: ['vue'],
-  globals: {
-    vue: 'Vue',
-  },
-  typescript: {
-    tsconfigOverride: {
-      compilerOptions: {
-        declaration: false,
-      },
-    },
-  },
+  entry: 'src/index.js',
+  // ...
 }
 ```
 
-**config array example**
+**array config example:**
 
 ```ts
+// libundler.config.js
+
 /** @type {import('@surmon-china/libundler/lib/interface').LibundlerConfigArray} */
 module.exports = [
   {
@@ -89,14 +97,35 @@ module.exports = [
 ]
 ```
 
-**config function example**
+**function config example:**
 
 ```ts
+// libundler.config.js
+
 /** @type {import('@surmon-china/libundler/lib/interface').LibundlerConfigFn} */
 module.exports = (rollupConfig): RollupConfig => {
   // overwrite the Rollup config
   rollupConfig.plugins.push(/* ... */)
+
   // ...
   return rollupConfig
 }
 ```
+
+### Development
+
+```bash
+yarn dev
+
+yarn lint
+
+yarn build
+```
+
+### Changelog
+
+Detailed changes for each release are documented in the [release notes](https://github.com/surmon-china/libundler/blob/main/CHANGELOG.md).
+
+### License
+
+[MIT](https://github.com/surmon-china/libundler/blob/main/LICENSE)
