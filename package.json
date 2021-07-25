@@ -40,7 +40,8 @@
   },
   "standard-version": {
     "skip": {
-      "changelog": true
+      "changelog": true,
+      "commit": true
     }
   },
   "dependencies": {
