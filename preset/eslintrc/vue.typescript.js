@@ -7,9 +7,7 @@ module.exports = {
   },
   parserOptions: {
     parser: '@typescript-eslint/parser',
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  extends: [
-    'plugin:vue/vue3-recommended'
-  ]
+  extends: ['plugin:vue/vue3-recommended'],
 }

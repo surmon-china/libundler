@@ -1,0 +1,21 @@
+{
+  "name": "rc",
+  "version": "0.1.0",
+  "main": "dist/rc.umd.js",
+  "module": "dist/rc.esm.js",
+  "types": "dist/rc.esm.d.ts",
+  "scripts": {
+    "lint": "eslint --ext .ts src/**",
+    "build": "node ../../bin/libundler"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^4.28.4",
+    "@typescript-eslint/parser": "^4.28.4",
+    "eslint": "^7.31.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.3.5"
+  }
+}
