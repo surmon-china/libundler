@@ -53,7 +53,7 @@ By default, you do not need to specify a configuration file, libundler will gene
 
 But if you have more specific needs, you can create `libundler.config.js` in your project root.
 
-[`libundler.config.js` interface:](https://github.com/surmon-china/libundler/blob/main/src/interface.ts)
+[**`libundler.config.js` interface**](https://github.com/surmon-china/libundler/blob/main/src/interface.ts)
 
 - `LibundlerConfigObject`
 - `LibundlerConfigObject[]`
