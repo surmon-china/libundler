@@ -28,8 +28,7 @@
   "files": [
     "bin",
     "lib",
-    "src",
-    "preset"
+    "src"
   ],
   "scripts": {
     "dev": "tsc -w",

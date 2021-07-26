@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file.
 
 - TypeScript `rollup-plugin-typescript2` to `rollup-plugin-ts`
 - Remove test/lint
+- Remove preset
 
 ### 0.3.3 (2020-03-29)
 
