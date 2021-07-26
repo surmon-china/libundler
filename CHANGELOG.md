@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+### 1.0.0 (2021-07-26)
+
+**Chore**
+
+- fix npm & CI config
+
 ### 1.0.0 (2021-07-24)
 
 **BREAKING CHANGE**
