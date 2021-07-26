@@ -38,12 +38,6 @@
     "rebirth": "npm run lint && npm run build",
     "release": ". ./scripts/release.sh"
   },
-  "standard-version": {
-    "skip": {
-      "changelog": true,
-      "commit": true
-    }
-  },
   "dependencies": {
     "@babel/core": "^7.14",
     "@rollup/plugin-alias": "^3.1",
