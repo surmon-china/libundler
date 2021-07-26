@@ -120,6 +120,8 @@ yarn dev
 yarn lint
 
 yarn build
+
+yarn release
 ```
 
 ### Changelog
