@@ -138,7 +138,7 @@ export interface LibundlerConfigObject {
    * - [@rollup/plugin-buble](https://github.com/rollup/plugins/tree/master/packages/buble)
    * @default {}
    */
-  parserOptions?: object
+  parserOptions?: Record<string, unknown>
 
   /**
    * postcss plugin options, defined to overwrite the default options.

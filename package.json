@@ -36,6 +36,7 @@
     "build": "tsc",
     "lint": "eslint --ext .ts src/**",
     "format": "prettier --write --parser typescript \"src/**/*.ts\"",
+    "rebirth": "npm run lint && npm run build",
     "release": ". ./scripts/release.sh"
   },
   "standard-version": {
@@ -73,6 +74,8 @@
     "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.4",
+    "@typescript-eslint/parser": "^4.28.4",
     "prettier": "^2.3.2",
     "rollup": "^2.54",
     "sass": "^1.36.0",
