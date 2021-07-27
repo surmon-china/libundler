@@ -30,7 +30,7 @@ yarn add @surmon-china/libundler --dev
 
 ```json
 "scripts": {
-  "build": "libundler",
+  "build": "libundler"
 }
 ```
 
@@ -38,7 +38,7 @@ or
 
 ```json
 "scripts": {
-  "build": "b",
+  "build": "b"
 }
 ```
 
