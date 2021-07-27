@@ -18,8 +18,11 @@
 
 ```bash
 npm install @surmon-china/libundler --save-dev
+```
 
-# or
+or
+
+```bash
 yarn add @surmon-china/libundler --dev
 ```
 
