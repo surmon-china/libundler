@@ -17,7 +17,7 @@ import { TargetBundleModuleType, RollupParserType } from './constant'
 import { LibundlerConfigObject } from './interface'
 import { logger } from './logger'
 
-export const normalizeRollupConfig = (
+export const configToRollupConfig = (
   bundlerConfig: LibundlerConfigObject
 ): RollupOptions => {
   const rollupOutput: OutputOptions[] = []

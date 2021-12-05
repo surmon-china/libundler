@@ -115,6 +115,21 @@ module.exports = (rollupConfig): RollupConfig => {
 }
 ```
 
+### JavaScript API
+
+```js
+const libundler = require('@surmon-china/libundler')
+
+libundler
+  .bundle(/* bundlerConfig */)
+  .then((result) => {
+    console.log('bundle success', result)
+  })
+  .catch((error) => {
+    console.log('bundle error', error)
+  })
+```
+
 ### Development
 
 ```bash
