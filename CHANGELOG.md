@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ### 1.1.0 (2021-12-05)
 
+**Bug fix**
+
+- Degrade chalk to 4.x. [5.x is pure ESM](https://github.com/chalk/chalk/releases/tag/v5.0.0)
+
+### 1.1.0 (2021-12-05)
+
 **Feature**
 
 - Support JavaScript API
