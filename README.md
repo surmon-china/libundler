@@ -16,19 +16,16 @@
 
 ### Usage
 
-**1. install**
+#### 1. install
 
 ```bash
 npm install @surmon-china/libundler --save-dev
 ```
 
-or
+You can also use `yarn` or `pnpm`.
 
-```bash
-yarn add @surmon-china/libundler --dev
-```
 
-**2. add `build` script to `package.json`**
+#### 2. add `build` script to `package.json`
 
 ```json
 "scripts": {
@@ -36,15 +33,10 @@ yarn add @surmon-china/libundler --dev
 }
 ```
 
-or
+You can also use the command `b`.
 
-```json
-"scripts": {
-  "build": "b"
-}
-```
 
-**3. run build**
+#### 3. run build**
 
 ```bash
 yarn build
