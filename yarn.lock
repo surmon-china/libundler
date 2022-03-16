@@ -337,7 +337,7 @@
     "@types/buble" "^0.19.2"
     buble "^0.20.0"
 
-"@rollup/plugin-commonjs@^21.0.2":
+"@rollup/plugin-commonjs@^21.0":
   version "21.0.2"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-commonjs/-/plugin-commonjs-21.0.2.tgz#0b9c539aa1837c94abfaf87945838b0fc8564891"
   integrity sha512-d/OmjaLVO4j/aQX69bwpWPpbvI3TJkQuxoAk7BH8ew1PyoMBLTOuvJTjzG8oEoW7drIIqB0KCJtfFLu/2GClWg==
