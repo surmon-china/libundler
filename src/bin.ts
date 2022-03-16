@@ -1,8 +1,8 @@
-import { program } from 'commander'
 import consola from 'consola'
-import { LIB_NAME, LIB_PACKAGE_JSON, LIB_CONFIG_FILE_NAME } from './constant'
+import { program } from 'commander'
+import { LIB_NAME, LIB_PACKAGE_JSON } from './constant'
 import { logger, link, red } from './logger'
-import { loadProjectFile } from './utils'
+import { loadUserConfig } from './loader'
 import { bundle } from '.'
 
 consola.wrapAll()
@@ -21,9 +21,11 @@ program
   .command('build', { isDefault: true })
   .description('Run bundler')
   .action(() => {
-    bundle(loadProjectFile(LIB_CONFIG_FILE_NAME))
-      .then(() => process.exit(0))
-      .catch(() => process.exit(1))
+    loadUserConfig().then((config) => {
+      bundle(config || void 0)
+        .then(() => process.exit(0))
+        .catch(() => process.exit(1))
+    })
   })
 
 program.parse(process.argv)

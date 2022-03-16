@@ -12,13 +12,11 @@
 
 📦 Universal JavaScript library bundler, powered by [Rollup](https://github.com/rollup).
 
-🏭 通用的 JavaScript 库打包工具，零配置、开箱即用。
-
 ---
 
 ### Usage
 
-1. **install**
+**1. install**
 
 ```bash
 npm install @surmon-china/libundler --save-dev
@@ -30,7 +28,7 @@ or
 yarn add @surmon-china/libundler --dev
 ```
 
-2. **add `build` script to `package.json`**
+**2. add `build` script to `package.json`**
 
 ```json
 "scripts": {
@@ -46,7 +44,7 @@ or
 }
 ```
 
-3. **run build**
+**3. run build**
 
 ```bash
 yarn build
@@ -56,11 +54,11 @@ yarn build
 
 ### Config
 
-By default, you do not need to specify a configuration file, libundler will generate a nearly perfect configuration for the bundle according to your `package.json`.
+By default, you do not need to specify configuration file, libundler will generate a nearly perfect configuration for the bundle according to your `package.json`.
 
-But if you have more specific needs, you can create `libundler.config.js` in your project root.
+But if you have more specific needs, you can create `libundler.config.js` or `libundler.config.ts` in your project root.
 
-[**`libundler.config.js` interface**](https://github.com/surmon-china/libundler/blob/main/src/interface.ts)
+[**libundler config interface**](/src/interface.ts)
 
 - `LibundlerConfigObject`
 - `LibundlerConfigObject[]`
@@ -68,11 +66,12 @@ But if you have more specific needs, you can create `libundler.config.js` in you
 
 **config example projects:**
 
-- [javascript](https://github.com/surmon-china/libundler/tree/main/tests/javascript)
-- [typescript](https://github.com/surmon-china/libundler/tree/main/tests/typescript)
-- [react-jsx-scss](https://github.com/surmon-china/libundler/tree/main/tests/react-jsx-scss)
-- [react-tsx](https://github.com/surmon-china/libundler/tree/main/tests/react-tsx)
-- [vue-ts](https://github.com/surmon-china/libundler/tree/main/tests/vue-ts)
+- [javascript nope config](/tests/nope-config)
+- [javascript `cjs` format config](/tests/cjs-config)
+- [javascript `esm` format config](/tests/esm-config)
+- [typescript](/tests/typescript)
+- [react-jsx-scss](/tests/react-jsx-scss)
+- [react-tsx](/tests/react-tsx)
 
 **object config example:**
 
@@ -110,7 +109,7 @@ module.exports = [
 // libundler.config.js
 
 /** @type {import('@surmon-china/libundler/lib/interface').LibundlerConfigFn} */
-module.exports = (rollupConfig): RollupConfig => {
+module.exports = (rollupConfig) => {
   // overwrite the Rollup config
   rollupConfig.plugins.push(/* ... */)
 
@@ -119,13 +118,37 @@ module.exports = (rollupConfig): RollupConfig => {
 }
 ```
 
+**`esm` config example:**
+
+```ts
+// libundler.config.js
+export default {
+  entry: 'src/index.js',
+  // ...
+}
+```
+
+**`.ts` config example:**
+
+```ts
+// libundler.config.ts
+import { defineConfig } from '@surmon-china/libundler'
+
+export default defineConfig({
+  entry: 'src/index.js',
+  // ...
+})
+```
+
 ### JavaScript API
 
 ```js
 const libundler = require('@surmon-china/libundler')
 
 libundler
-  .bundle(/* bundlerConfig */)
+  .bundle({
+    /* LibundlerConfig */
+  })
   .then((result) => {
     console.log('bundle success', result)
   })

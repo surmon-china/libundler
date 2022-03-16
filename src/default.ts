@@ -6,7 +6,6 @@ import { pascalify, kebabcase, loadProjectFile } from './utils'
 const PACKAGE_NAME = Object.freeze({
   TypeScript: 'typescript',
   React: 'react',
-  Vue: 'vue',
   ESLint: 'eslint',
 })
 
@@ -27,7 +26,6 @@ export const getDefaultConfig = (): Partial<LibundlerConfigObject> => {
 
   const isEnabledTS = [...depNames, ...devDepNames].includes(PACKAGE_NAME.TypeScript)
   const isEnabledESLint = Boolean(allDependencies[PACKAGE_NAME.ESLint])
-  const isEnabledVue = Boolean(allDependencies[PACKAGE_NAME.Vue])
   // const isEnabledReact = Boolean(allDependencies[PACKAGE_NAME.React])
 
   const banner = getDefaultBanner({
@@ -69,7 +67,6 @@ export const getDefaultConfig = (): Partial<LibundlerConfigObject> => {
     parser: RollupParserType.Buble,
     parserOptions: {},
     postcss: {},
-    vue: isEnabledVue ? {} : false,
     eslint: isEnabledESLint ? {} : false,
     typescript: isEnabledTS ? {} : false,
     minimize: true,

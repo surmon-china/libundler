@@ -10,3 +10,6 @@ export const createType = (type: Type) => {
     [type]: Type[type],
   }
 }
+
+export const op1 = createType(Type.Option1)
+export const op2 = createType(Type.Option2)

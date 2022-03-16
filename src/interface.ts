@@ -6,19 +6,24 @@ import { RollupReplaceOptions } from '@rollup/plugin-replace'
 import { RollupEslintOptions } from '@rollup/plugin-eslint'
 import { PostCSSPluginConf } from 'rollup-plugin-postcss'
 import { TypescriptPluginOptions } from 'rollup-plugin-ts'
-import { Options as RollupVueOptions } from 'rollup-plugin-vue'
 import { Options as RollupTerserOptions } from 'rollup-plugin-terser'
 import { PluginVisualizerOptions } from 'rollup-plugin-visualizer'
 import { TargetBundleModuleType, RollupParserType } from './constant'
 
-export type LibundlerConfig =
-  | LibundlerConfigObject
-  | LibundlerConfigArray
-  | LibundlerConfigFn
+/**
+ * Type helper to make it easier to use libundler.config.ts
+ * accepts a direct {@link LibundlerConfig} object, or a function that returns {@link RollupOptions}.
+ */
+export function defineConfig(config: LibundlerConfigObject): LibundlerConfigObject
+export function defineConfig(config: LibundlerConfigArray): LibundlerConfigArray
+export function defineConfig(config: LibundlerConfigFn): LibundlerConfigFn
+export function defineConfig(config: any) {
+  return config
+}
+
+export type LibundlerConfig = LibundlerConfigObject | LibundlerConfigArray | LibundlerConfigFn
+export type LibundlerConfigFn = (defaultRollupOptions: Partial<RollupOptions>) => RollupOptions
 export type LibundlerConfigArray = Array<LibundlerConfigObject>
-export type LibundlerConfigFn = (
-  defaultRollupOptions: Partial<LibundlerConfigObject>
-) => RollupOptions
 export interface LibundlerConfigObject {
   /**
    * Library name.
@@ -146,13 +151,6 @@ export interface LibundlerConfigObject {
    * @default { ... }
    */
   postcss?: Partial<PostCSSPluginConf>
-
-  /**
-   * Enable Vue plugin, `false` to disable.
-   * @see [rollup-plugin-vue](https://github.com/vuejs/rollup-plugin-vue)
-   * @default auto enable by `<package.json>.devDependencies`
-   */
-  vue?: false | Partial<RollupVueOptions>
 
   /**
    * Enable ESLint plugin (before build), `false` to disable.

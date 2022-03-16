@@ -4,8 +4,10 @@ import { getDefaultConfig } from './default'
 import { configToRollupConfig } from './config'
 import { logger, br, dir, yellow } from './logger'
 
+export * from './interface'
 export { configToRollupConfig } from './config'
-export const bundle = (bundlerConfig: LibundlerConfig) => {
+
+export const bundle = (bundlerConfig?: LibundlerConfig) => {
   // config
   const defaultConfig: Partial<LibundlerConfigObject> = getDefaultConfig()
   let rollupConfig: RollupOptions | Array<RollupOptions> | null = null
@@ -93,10 +95,12 @@ export const bundle = (bundlerConfig: LibundlerConfig) => {
       : doBundle(rollupConfig)
   )
     .then((result) => {
+      br()
       logger.success(`${bundlePrefix} bundle done!`)
       return result
     })
     .catch((error) => {
+      br()
       logger.error(`bundle error!`, error)
       throw error
     })

@@ -12,14 +12,11 @@ import postcss from 'rollup-plugin-postcss'
 import { terser } from 'rollup-plugin-terser'
 import visualizer from 'rollup-plugin-visualizer'
 import typescript from 'rollup-plugin-ts'
-import vue from 'rollup-plugin-vue'
 import { TargetBundleModuleType, RollupParserType } from './constant'
 import { LibundlerConfigObject } from './interface'
 import { logger } from './logger'
 
-export const configToRollupConfig = (
-  bundlerConfig: LibundlerConfigObject
-): RollupOptions => {
+export const configToRollupConfig = (bundlerConfig: LibundlerConfigObject): RollupOptions => {
   const rollupOutput: OutputOptions[] = []
   const rollupPlugins: Plugin[] = []
   const rollupConfig: RollupOptions = {
@@ -85,11 +82,6 @@ export const configToRollupConfig = (
   // JSON
   rollupPlugins.push(json())
 
-  // Vue
-  if (bundlerConfig.vue) {
-    rollupPlugins.push(vue(bundlerConfig.vue))
-  }
-
   // postcss
   rollupPlugins.push(
     postcss({
@@ -126,7 +118,7 @@ export const configToRollupConfig = (
         )
       )
     } else {
-      logger.warn('请指定正确的 parser 选项，可选：babel | buble')
+      logger.warn(`'parser' only supports 'babel' or 'buble' types`)
     }
   }
 

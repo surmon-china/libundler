@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+### 2.0.0 (2022-03-16)
+
+**Breaking Change**
+
+- Remove Vue SFC support, move to [Vite library-mode](https://vitejs.dev/guide/build.html#library-mode)
+
+**Feature**
+
+- Support `.ts` `esm` `cjs` config file
+
+**Chore**
+
+- Add `test` script
+
 ### 1.1.1 (2021-12-05)
 
 **Bug fix**

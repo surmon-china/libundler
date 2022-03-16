@@ -1,10 +1,10 @@
 import fs from 'fs'
 import path from 'path'
-import process from 'process'
+import { PROJECT_ROOT_PATH } from './constant'
 import { logger } from './logger'
 
 export const loadProjectFile = (filePath: string, strict = false) => {
-  const target = path.resolve(process.cwd(), filePath)
+  const target = path.resolve(PROJECT_ROOT_PATH, filePath)
   if (fs.existsSync(target)) {
     return require(target)
   } else if (strict) {

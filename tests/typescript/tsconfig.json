@@ -4,6 +4,7 @@
     "target": "ES6",
     "lib": ["ESNext"],
     "strict": true,
-    "declaration": true
+    "declaration": true,
+    "moduleResolution": "node"
   }
 }

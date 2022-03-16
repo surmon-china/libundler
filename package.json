@@ -1,6 +1,6 @@
 {
   "name": "@surmon-china/libundler",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "Universal JavaScript library bundler",
   "author": "Surmon",
   "license": "MIT",
@@ -13,8 +13,6 @@
     "TypeScript bundler",
     "zero config bundler",
     "react component bundler",
-    "vue component bundler",
-    "vue SFC bundler",
     "rollup",
     "webpack"
   ],
@@ -33,48 +31,49 @@
   "scripts": {
     "dev": "tsc -w",
     "build": "tsc",
+    "test": "node ./tests",
     "lint": "eslint --ext .ts src/**",
     "format": "prettier --write --parser typescript \"src/**/*.ts\"",
-    "rebirth": "npm run lint && npm run build",
+    "rebirth": "npm run lint && npm run test && npm run build",
     "release": ". ./scripts/release.sh"
   },
   "dependencies": {
-    "@babel/core": "^7.16",
+    "@babel/core": "^7.17",
     "@rollup/plugin-alias": "^3.1",
     "@rollup/plugin-babel": "^5.3",
     "@rollup/plugin-buble": "^0.21",
     "@rollup/plugin-commonjs": "^21.0",
     "@rollup/plugin-eslint": "^8.0",
     "@rollup/plugin-json": "^4.1",
-    "@rollup/plugin-node-resolve": "^13.0",
-    "@rollup/plugin-replace": "^3.0",
-    "@vue/compiler-sfc": "^3",
+    "@rollup/plugin-node-resolve": "^13.1",
+    "@rollup/plugin-replace": "^4.0",
     "chalk": "^4.1.2",
-    "commander": "^8.3",
+    "commander": "^9.0",
     "consola": "^2.15",
-    "postcss": "^8.4.4",
-    "rollup": "^2.60",
+    "esbuild": "^0.14.27",
+    "postcss": "^8.4.11",
+    "rollup": "^2.70",
     "rollup-plugin-postcss": "^4.0",
     "rollup-plugin-terser": "^7.0",
-    "rollup-plugin-ts": "^2.0.4",
-    "rollup-plugin-visualizer": "^5.5",
-    "rollup-plugin-vue": "^6.0",
+    "rollup-plugin-ts": "^2.0.5",
+    "rollup-plugin-visualizer": "^5.6",
     "tslib": "^2.3.1"
   },
   "devDependencies": {
-    "@types/babel__core": "^7.1.16",
-    "@types/eslint": "^7.28.0",
-    "eslint": "^7.31.0",
-    "eslint-config-prettier": "^8.3.0",
+    "@types/babel__core": "^7.1.18",
+    "@types/eslint": "^7.x",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "eslint": "^7.x",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.5.0",
-    "@typescript-eslint/parser": "^5.5.0",
     "prettier": "^2.5.1",
-    "rollup": "^2.60",
-    "sass": "^1.44.0",
-    "typescript": "^4.5.2"
+    "rollup": "^2.70",
+    "sass": "^1.49.9",
+    "shelljs": "^0.8.5",
+    "typescript": "^4.6.2"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   }
 }

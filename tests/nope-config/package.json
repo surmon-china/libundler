@@ -1,0 +1,9 @@
+{
+  "name": "js-lib",
+  "version": "0.1.0",
+  "main": "dist/js-lib.umd.js",
+  "module": "dist/js-lib.esm.js",
+  "scripts": {
+    "build": "node ../../bin/libundler"
+  }
+}

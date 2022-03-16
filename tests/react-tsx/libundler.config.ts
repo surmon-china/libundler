@@ -1,5 +1,6 @@
-/** @type {import('../../lib/interface').LibundlerConfigObject} */
-module.exports = {
+import { defineConfig } from '../../lib'
+
+export default defineConfig({
   libName: 'rc',
   outFileName: 'rc',
   entry: './src/index.tsx',
@@ -9,4 +10,4 @@ module.exports = {
     react: 'React',
     'react-dom': 'ReactDOM',
   },
-}
+})
