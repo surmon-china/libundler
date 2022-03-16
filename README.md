@@ -36,7 +36,7 @@ You can also use `yarn` or `pnpm`.
 You can also use the command `b`.
 
 
-#### 3. run build**
+#### 3. run build
 
 ```bash
 yarn build
