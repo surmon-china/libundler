@@ -9,9 +9,10 @@ import buble from '@rollup/plugin-buble'
 import eslint from '@rollup/plugin-eslint'
 import babel from '@rollup/plugin-babel'
 import postcss from 'rollup-plugin-postcss'
-import { terser } from 'rollup-plugin-terser'
+import typescript from '@rollup/plugin-typescript'
+import ts from 'rollup-plugin-ts'
 import visualizer from 'rollup-plugin-visualizer'
-import typescript from 'rollup-plugin-ts'
+import { terser } from 'rollup-plugin-terser'
 import { TargetModuleEnum, ParserEnum } from './constant'
 import { LibundlerConfigObject } from './interface'
 import { logger } from './logger'
@@ -74,23 +75,25 @@ export const configToRollupConfig = (bundlerConfig: LibundlerConfigObject): Roll
     rollupPlugins.push(eslint(bundlerConfig.eslint))
   }
 
+  // ts
+  if (bundlerConfig.ts) {
+    rollupPlugins.push(ts(bundlerConfig.ts))
+  }
+
   // TypeScript
   if (bundlerConfig.typescript) {
     rollupPlugins.push(typescript(bundlerConfig.typescript))
   }
 
   // JSON
-  rollupPlugins.push(json())
+  rollupPlugins.push(json(bundlerConfig.json))
 
   // postcss
   rollupPlugins.push(
     postcss({
       extract: true,
-      minimize: bundlerConfig.minimize,
+      minimize: true,
       extensions: ['.css', '.styl', '.sass', '.scss', 'less'],
-      // namedExports(name) {
-      //   return name
-      // },
       ...bundlerConfig.postcss,
     })
   )
@@ -135,17 +138,13 @@ export const configToRollupConfig = (bundlerConfig: LibundlerConfigObject): Roll
     rollupPlugins.push(alias(bundlerConfig.alias))
   }
 
-  // minimize
-  if (bundlerConfig.minimize) {
+  // terser
+  if (bundlerConfig.terser) {
     rollupPlugins.push(
       terser(
-        typeof bundlerConfig.minimize === 'object'
-          ? bundlerConfig.minimize
-          : {
-              output: {
-                ecma: 5,
-              },
-            }
+        typeof bundlerConfig.terser === 'object'
+          ? bundlerConfig.terser
+          : { output: { ecma: 5 } }
       )
     )
   }

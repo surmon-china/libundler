@@ -63,9 +63,11 @@ export const getDefaultConfig = (): Partial<LibundlerConfigObject> => {
     parser: ParserEnum.Buble,
     parserOptions: {},
     postcss: {},
+    json: {},
     eslint: isEnabledESLint ? {} : false,
-    typescript: isEnabledTS ? {} : false,
-    minimize: true,
+    ts: isEnabledTS ? {} : false,
+    typescript: false,
+    terser: true,
     visualizer: false,
     verbose: false,
   }

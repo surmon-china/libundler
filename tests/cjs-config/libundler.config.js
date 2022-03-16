@@ -4,5 +4,5 @@ module.exports = {
   outFileName: 'js-lib-file',
   entry: './src/index.js',
   outDir: './dist',
-  minimize: false,
+  terser: false,
 }

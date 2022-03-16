@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+### 2.1.0 (2022-03-16)
+
+- Add `@rollup/plugin-typescript` plugin
+- Support `@rollup/plugin-json` plugin options
+- Rename `minimize` to `terser`
+
 ### 2.0.0 (2022-03-16)
 
 **Breaking Change**

@@ -1,8 +1,10 @@
 import { RollupOptions, ExternalOption, GlobalsOption, OutputOptions } from 'rollup'
 import { RollupNodeResolveOptions } from '@rollup/plugin-node-resolve'
 import { RollupCommonJSOptions } from '@rollup/plugin-commonjs'
+import { RollupTypescriptOptions } from '@rollup/plugin-typescript'
 import { RollupAliasOptions } from '@rollup/plugin-alias'
 import { RollupReplaceOptions } from '@rollup/plugin-replace'
+import { RollupJsonOptions } from '@rollup/plugin-json'
 import { RollupEslintOptions } from '@rollup/plugin-eslint'
 import { PostCSSPluginConf } from 'rollup-plugin-postcss'
 import { TypescriptPluginOptions } from 'rollup-plugin-ts'
@@ -114,7 +116,7 @@ export interface LibundlerConfigObject {
   replace?: RollupReplaceOptions
 
   /**
-   * Treating [module] as external dependency.
+   * Treating `[module]` as external dependency.
    * @see [rollup - peer-dependencies](https://rollupjs.org/guide/en/#peer-dependencies)
    * @see [rollup - warning-treating-module-as-external-dependency](https://rollupjs.org/guide/en/#warning-treating-module-as-external-dependency)
    * @default []
@@ -146,11 +148,32 @@ export interface LibundlerConfigObject {
   parserOptions?: Record<string, unknown>
 
   /**
-   * postcss plugin options, defined to overwrite the default options.
+   * Rollup postcss plugin options, defined to overwrite the default options.
    * @see [rollup-plugin-postcss](https://github.com/egoist/rollup-plugin-postcss)
-   * @default { ... }
+   * @default {}
    */
   postcss?: Partial<PostCSSPluginConf>
+
+  /**
+   * Rollup JSON plugin options, defined to overwrite the default options.
+   * @see [@rollup/plugin-json](https://github.com/rollup/plugins/tree/master/packages/json)
+   * @default {}
+   */
+  json?: RollupJsonOptions
+
+  /**
+   * Rollup TypeScript plugin options, `false` to disable.
+   * @see [@rollup/plugin-typescript](https://github.com/rollup/plugins/tree/master/packages/typescript)
+   * @default false
+   */
+  typescript?: false | Partial<RollupTypescriptOptions>
+
+  /**
+   * Enable TS plugin (before build), `false` to disable.
+   * @see [rollup-plugin-ts](https://github.com/wessberg/rollup-plugin-ts)
+   * @default auto enable by `<package.json>.devDependencies`
+   */
+  ts?: false | Partial<TypescriptPluginOptions>
 
   /**
    * Enable ESLint plugin (before build), `false` to disable.
@@ -160,18 +183,11 @@ export interface LibundlerConfigObject {
   eslint?: false | RollupEslintOptions
 
   /**
-   * Enable TypeScript plugin (before build), `false` to disable.
-   * @see [rollup-plugin-ts](https://github.com/wessberg/rollup-plugin-ts)
-   * @default auto enable by `<package.json>.devDependencies`
-   */
-  typescript?: false | Partial<TypescriptPluginOptions>
-
-  /**
    * Enable compression, use terser, `false` to disable.
    * @see [rollup-plugin-terser](https://github.com/TrySound/rollup-plugin-terser)
    * @default true
    */
-  minimize?: boolean | RollupTerserOptions
+  terser?: boolean | RollupTerserOptions
 
   /**
    * Visualize and analyze this bundle file, use `rollup-plugin-visualizer`, `false` to disable.

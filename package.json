@@ -1,6 +1,6 @@
 {
   "name": "@surmon-china/libundler",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Universal JavaScript library bundler",
   "author": "Surmon",
   "license": "MIT",
@@ -47,6 +47,7 @@
     "@rollup/plugin-json": "^4.1",
     "@rollup/plugin-node-resolve": "^13.1",
     "@rollup/plugin-replace": "^4.0",
+    "@rollup/plugin-typescript": "^8.3.1",
     "chalk": "^4.1.2",
     "commander": "^9.0",
     "consola": "^2.15",

@@ -6,5 +6,5 @@ export default {
     react: 'React',
     'react-dom': 'ReactDOM',
   },
-  minimize: false,
+  terser: false,
 }
