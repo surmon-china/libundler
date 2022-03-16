@@ -8,7 +8,7 @@
 &nbsp;
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/surmon-china/libundler/Publish?label=publish&style=for-the-badge)](https://github.com/surmon-china/libundler/actions?query=workflow%3APublish)
 &nbsp;
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](https://github.com/surmon-china/libundler/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](/LICENSE)
 
 📦 Universal JavaScript library bundler, powered by [Rollup](https://github.com/rollup).
 
@@ -163,8 +163,8 @@ yarn release
 
 ### Changelog
 
-Detailed changes for each release are documented in the [release notes](https://github.com/surmon-china/libundler/blob/main/CHANGELOG.md).
+Detailed changes for each release are documented in the [release notes](/CHANGELOG.md).
 
 ### License
 
-[MIT](https://github.com/surmon-china/libundler/blob/main/LICENSE)
+[MIT](/LICENSE)
