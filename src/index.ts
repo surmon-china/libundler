@@ -4,8 +4,8 @@ import { getDefaultConfig } from './default'
 import { configToRollupConfig } from './config'
 import { logger, br, dir, yellow } from './logger'
 
-export * from './interface'
 export { configToRollupConfig } from './config'
+export * from './interface'
 
 export const bundle = (bundlerConfig?: LibundlerConfig) => {
   // config

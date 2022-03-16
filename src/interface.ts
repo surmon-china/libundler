@@ -8,7 +8,7 @@ import { PostCSSPluginConf } from 'rollup-plugin-postcss'
 import { TypescriptPluginOptions } from 'rollup-plugin-ts'
 import { Options as RollupTerserOptions } from 'rollup-plugin-terser'
 import { PluginVisualizerOptions } from 'rollup-plugin-visualizer'
-import { TargetBundleModuleType, RollupParserType } from './constant'
+import { TargetModuleType, ParserType } from './constant'
 
 /**
  * Type helper to make it easier to use libundler.config.ts
@@ -70,7 +70,7 @@ export interface LibundlerConfigObject {
    * @type `TargetBundleModuleType`
    * @default ['umd', 'esm', 'cjs']
    */
-  targets?: TargetBundleModuleType[]
+  targets?: TargetModuleType[]
 
   /**
    * Bundle file export mode.
@@ -133,7 +133,7 @@ export interface LibundlerConfigObject {
    * @type `false` | `'babel'` | `'buble'`
    * @default 'buble'
    */
-  parser?: false | RollupParserType
+  parser?: false | ParserType
 
   /**
    * Rollup parser plugin options.

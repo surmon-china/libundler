@@ -1,4 +1,4 @@
-import { TargetBundleModuleType, RollupParserType } from './constant'
+import { TargetModuleEnum, ParserEnum } from './constant'
 import { LibundlerConfigObject } from './interface'
 import { getDefaultBanner } from './banner'
 import { pascalify, kebabcase, loadProjectFile } from './utils'
@@ -43,11 +43,7 @@ export const getDefaultConfig = (): Partial<LibundlerConfigObject> => {
     outDir: 'dist',
     banner,
     sourcemap: true,
-    targets: [
-      TargetBundleModuleType.ESM,
-      TargetBundleModuleType.UMD,
-      TargetBundleModuleType.CJS,
-    ],
+    targets: [TargetModuleEnum.ESM, TargetModuleEnum.UMD, TargetModuleEnum.CJS],
     exports: 'auto',
     commonjs: {
       // https://github.com/rollup/plugins/tree/master/packages/node-resolve#extensions
@@ -64,7 +60,7 @@ export const getDefaultConfig = (): Partial<LibundlerConfigObject> => {
     },
     external: [],
     globals: {},
-    parser: RollupParserType.Buble,
+    parser: ParserEnum.Buble,
     parserOptions: {},
     postcss: {},
     eslint: isEnabledESLint ? {} : false,

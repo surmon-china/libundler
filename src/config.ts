@@ -12,7 +12,7 @@ import postcss from 'rollup-plugin-postcss'
 import { terser } from 'rollup-plugin-terser'
 import visualizer from 'rollup-plugin-visualizer'
 import typescript from 'rollup-plugin-ts'
-import { TargetBundleModuleType, RollupParserType } from './constant'
+import { TargetModuleEnum, ParserEnum } from './constant'
 import { LibundlerConfigObject } from './interface'
 import { logger } from './logger'
 
@@ -27,7 +27,7 @@ export const configToRollupConfig = (bundlerConfig: LibundlerConfigObject): Roll
   }
 
   /** output */
-  if (bundlerConfig.targets!.includes(TargetBundleModuleType.ESM)) {
+  if (bundlerConfig.targets!.includes(TargetModuleEnum.ESM)) {
     rollupOutput.push({
       banner: bundlerConfig.banner || void 0,
       sourcemap: bundlerConfig.sourcemap,
@@ -37,7 +37,7 @@ export const configToRollupConfig = (bundlerConfig: LibundlerConfigObject): Roll
       exports: bundlerConfig.exports,
     })
   }
-  if (bundlerConfig.targets!.includes(TargetBundleModuleType.CJS)) {
+  if (bundlerConfig.targets!.includes(TargetModuleEnum.CJS)) {
     rollupOutput.push({
       banner: bundlerConfig.banner || void 0,
       sourcemap: bundlerConfig.sourcemap,
@@ -49,7 +49,7 @@ export const configToRollupConfig = (bundlerConfig: LibundlerConfigObject): Roll
       globals: bundlerConfig.globals,
     })
   }
-  if (bundlerConfig.targets!.includes(TargetBundleModuleType.UMD)) {
+  if (bundlerConfig.targets!.includes(TargetModuleEnum.UMD)) {
     rollupOutput.push({
       banner: bundlerConfig.banner || void 0,
       sourcemap: bundlerConfig.sourcemap,
@@ -97,7 +97,7 @@ export const configToRollupConfig = (bundlerConfig: LibundlerConfigObject): Roll
 
   // parser
   if (bundlerConfig.parser) {
-    if (bundlerConfig.parser === RollupParserType.Babel) {
+    if (bundlerConfig.parser === ParserEnum.Babel) {
       rollupPlugins.push(
         babel(
           bundlerConfig.parserOptions || {
@@ -108,7 +108,7 @@ export const configToRollupConfig = (bundlerConfig: LibundlerConfigObject): Roll
           }
         )
       )
-    } else if (bundlerConfig.parser === RollupParserType.Buble) {
+    } else if (bundlerConfig.parser === ParserEnum.Buble) {
       rollupPlugins.push(
         // https://buble.surge.sh/guide/
         buble(
