@@ -9,8 +9,6 @@ import buble from '@rollup/plugin-buble'
 import eslint from '@rollup/plugin-eslint'
 import babel from '@rollup/plugin-babel'
 import postcss from 'rollup-plugin-postcss'
-import typescript from '@rollup/plugin-typescript'
-import ts from 'rollup-plugin-ts'
 import visualizer from 'rollup-plugin-visualizer'
 import { terser } from 'rollup-plugin-terser'
 import { TargetModuleEnum, ParserEnum } from './constant'
@@ -77,12 +75,12 @@ export const configToRollupConfig = (bundlerConfig: LibundlerConfigObject): Roll
 
   // ts
   if (bundlerConfig.ts) {
-    rollupPlugins.push(ts(bundlerConfig.ts))
+    rollupPlugins.push(require('rollup-plugin-ts')(bundlerConfig.ts))
   }
 
   // TypeScript
   if (bundlerConfig.typescript) {
-    rollupPlugins.push(typescript(bundlerConfig.typescript))
+    rollupPlugins.push(require('@rollup/plugin-typescript')(bundlerConfig.typescript))
   }
 
   // JSON

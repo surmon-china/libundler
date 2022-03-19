@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+### 2.2.0 (2022-03-20)
+
+**Bug fix**
+
+- Amend `import` to `import type` in `interface.ts`
+- Fix config `parserOptions` default value
+- Fix TypeScript import error caused by `rollup-plugin-ts` `@rollup/plugin-typescript`
+
 ### 2.1.0 (2022-03-16)
 
 - Add `@rollup/plugin-typescript` plugin
