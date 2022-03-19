@@ -55,14 +55,14 @@ export interface LibundlerConfigObject {
 
   /**
    * File header of output bundle file, `false` to disable.
-   * @see [banner template](https://github.com/surmon-china/abc-factory/blob/master/lib/default.js#L18)
+   * @see [banner template](https://github.com/surmon-china/libundler/blob/main/src/banner.ts)
    * @default <banner template>
    */
   banner?: false | string
 
   /**
    * Generate sourcemap, `false` to disable.
-   * @see [banner template](https://github.com/surmon-china/abc-factory/blob/master/lib/default.js#L18)
+   * @see [banner template](https://rollupjs.org/guide/en/#outputsourcemap)
    * @default true
    */
   sourcemap?: OutputOptions['sourcemap']
