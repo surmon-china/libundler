@@ -2,7 +2,7 @@ import { rollup, RollupOptions, OutputOptions } from 'rollup'
 import { LibundlerConfig, LibundlerConfigObject } from './interface'
 import { getDefaultConfig } from './default'
 import { configToRollupConfig } from './config'
-import { logger, br, dir, yellow } from './logger'
+import { logger, dir, yellow } from './logger'
 
 export { configToRollupConfig } from './config'
 export * from './interface'
@@ -43,10 +43,8 @@ export const bundle = (bundlerConfig?: LibundlerConfig) => {
 
   if (libundlerConfig.verbose) {
     // log config
-    br()
     logger.log(`libundler config ↓\n`)
     dir(libundlerConfig)
-    br()
     logger.log(`rollup config ↓\n`)
     dir(rollupConfig)
   }
@@ -73,7 +71,6 @@ export const bundle = (bundlerConfig?: LibundlerConfig) => {
       const outChunk = output[0]
       // closes the bundle
       await bundle.close()
-      br()
       logger.success(`${bundlePrefix} - ${yellow(outChunk.fileName)} is bundled!`)
       if (libundlerConfig.verbose) {
         dir(outChunk)
@@ -95,12 +92,10 @@ export const bundle = (bundlerConfig?: LibundlerConfig) => {
       : doBundle(rollupConfig)
   )
     .then((result) => {
-      br()
       logger.success(`${bundlePrefix} bundle done!`)
       return result
     })
     .catch((error) => {
-      br()
       logger.error(`bundle error!`, error)
       throw error
     })
