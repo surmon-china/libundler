@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+### 2.3.0 (2022-06-12)
+
+**Bug fix**
+
+- Fix rollup-plugin-ts [`path.charCodeAt`](https://github.com/microsoft/TypeScript/issues/47374) error
+
+**Chore**
+
+- Update dependencies
+
 ### 2.2.0 (2022-03-20)
 
 **Bug fix**
