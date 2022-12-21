@@ -2,9 +2,9 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/surmon-china/libundler.svg?style=for-the-badge)](https://github.com/surmon-china/libundler/stargazers)
 &nbsp;
-[![npm](https://img.shields.io/npm/v/@surmon-china/libundler?color=c7343a&label=npm&style=for-the-badge)](https://www.npmjs.com/package/@surmon-china/libundler)
+[![GitHub issues](https://img.shields.io/github/issues-raw/surmon-china/libundler.svg?style=for-the-badge)](https://github.com/surmon-china/libundler/issues)
 &nbsp;
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/surmon-china/libundler/Publish?label=publish&style=for-the-badge)](https://github.com/surmon-china/libundler/actions?query=workflow%3APublish)
+[![npm](https://img.shields.io/npm/v/@surmon-china/libundler?color=c7343a&label=npm&style=for-the-badge)](https://www.npmjs.com/package/@surmon-china/libundler)
 &nbsp;
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](/LICENSE)
 
